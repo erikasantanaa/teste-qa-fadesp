@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20240205 14:30:14.099" rpa="false" schemaversion="4">
+<suite id="s1" name="Register" source="C:\Users\Erika Santana\Desktop\formulario-register\register.robot">
+<test id="s1-t1" name="Caso de Teste Novo Registro" line="11">
+<kw name="Abrir o navegador" library="register_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240205 14:30:14.367" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20240205 14:30:14.367" endtime="20240205 14:30:16.044"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240205 14:30:16.044" endtime="20240205 14:30:16.175"/>
+</kw>
+<status status="PASS" starttime="20240205 14:30:14.367" endtime="20240205 14:30:16.175"/>
+</kw>
+<kw name="Dado que estou em Automation Demo Site &gt;&gt; Register" library="register_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240205 14:30:16.177" level="INFO">Opening url 'https://demo.automationtesting.in/Register.html'</msg>
+<status status="PASS" starttime="20240205 14:30:16.176" endtime="20240205 14:30:27.938"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//h2[contains(.,'Register')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240205 14:30:27.939" endtime="20240205 14:30:27.998"/>
+</kw>
+<status status="PASS" starttime="20240205 14:30:16.176" endtime="20240205 14:30:27.998"/>
+</kw>
+<kw name="Quando preencho o campo obrigatório “Full Name” sendo “Érika”" library="register_resources" sourcename="Quando preencho o campo obrigatório “Full Name” sendo “${NOME}”">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:30:30.000" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:30:27.999" endtime="20240205 14:30:30.000"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//input[@ng-model='FirstName']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:30:30.001" level="INFO">Clicking element '//input[@ng-model='FirstName']'.</msg>
+<status status="PASS" starttime="20240205 14:30:30.000" endtime="20240205 14:30:30.076"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:30:32.078" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:30:30.078" endtime="20240205 14:30:32.078"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=//input[@ng-model='FirstName']</arg>
+<arg>text="${NOME}"</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240205 14:30:32.079" level="INFO">Typing text '"Érika"' into text field '//input[@ng-model='FirstName']'.</msg>
+<status status="PASS" starttime="20240205 14:30:32.078" endtime="20240205 14:30:32.156"/>
+</kw>
+<status status="PASS" starttime="20240205 14:30:27.999" endtime="20240205 14:30:32.156"/>
+</kw>
+<kw name="E preencho o campo “Full Name” sendo o “Santana”" library="register_resources" sourcename="E preencho o campo “Full Name” sendo o “${SOBRENOME}”">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:30:34.157" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:30:32.156" endtime="20240205 14:30:34.157"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//input[@ng-model='LastName']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:30:34.157" level="INFO">Clicking element '//input[@ng-model='LastName']'.</msg>
+<status status="PASS" starttime="20240205 14:30:34.157" endtime="20240205 14:30:34.203"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:30:36.204" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:30:34.204" endtime="20240205 14:30:36.204"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=//input[@ng-model='LastName']</arg>
+<arg>text=${SOBRENOME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240205 14:30:36.204" level="INFO">Typing text 'Santana' into text field '//input[@ng-model='LastName']'.</msg>
+<status status="PASS" starttime="20240205 14:30:36.204" endtime="20240205 14:30:36.280"/>
+</kw>
+<status status="PASS" starttime="20240205 14:30:32.156" endtime="20240205 14:30:36.280"/>
+</kw>
+<kw name="E preencho o campo “Address” sendo &quot;Rua Jader Dias , n 235&quot;" library="register_resources" sourcename="E preencho o campo “Address” sendo &quot;${ENDEREÇO}&quot;">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:30:38.283" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:30:36.282" endtime="20240205 14:30:38.283"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//textarea[@ng-model='Adress']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:30:38.283" level="INFO">Clicking element '//textarea[@ng-model='Adress']'.</msg>
+<status status="PASS" starttime="20240205 14:30:38.283" endtime="20240205 14:30:38.331"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:30:40.332" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:30:38.331" endtime="20240205 14:30:40.332"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=//textarea[@ng-model='Adress']</arg>
+<arg>text=${ENDEREÇO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240205 14:30:40.333" level="INFO">Typing text 'Rua Jader Dias , n 235' into text field '//textarea[@ng-model='Adress']'.</msg>
+<status status="PASS" starttime="20240205 14:30:40.332" endtime="20240205 14:30:40.411"/>
+</kw>
+<status status="PASS" starttime="20240205 14:30:36.281" endtime="20240205 14:30:40.411"/>
+</kw>
+<kw name="E preencho o campo obrigatório “Email address” sendo &quot;teste123456@gmai.com&quot;" library="register_resources" sourcename="E preencho o campo obrigatório “Email address” sendo &quot;${EMAIL}&quot;">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:30:42.413" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:30:40.412" endtime="20240205 14:30:42.413"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//input[@ng-model='EmailAdress']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:30:42.415" level="INFO">Clicking element '//input[@ng-model='EmailAdress']'.</msg>
+<status status="PASS" starttime="20240205 14:30:42.414" endtime="20240205 14:30:42.497"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:30:44.499" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:30:42.498" endtime="20240205 14:30:44.499"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=//input[@ng-model='EmailAdress']</arg>
+<arg>text=${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240205 14:30:44.500" level="INFO">Typing text 'teste123456@gmai.com' into text field '//input[@ng-model='EmailAdress']'.</msg>
+<status status="PASS" starttime="20240205 14:30:44.499" endtime="20240205 14:30:44.598"/>
+</kw>
+<status status="PASS" starttime="20240205 14:30:40.412" endtime="20240205 14:30:44.598"/>
+</kw>
+<kw name="E preencho o campo obrigatório “Phone” sendo &quot;(91) 983551401&quot;" library="register_resources" sourcename="E preencho o campo obrigatório “Phone” sendo &quot;${NUMERO}&quot;">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:30:46.599" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:30:44.599" endtime="20240205 14:30:46.599"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//input[@ng-model='Phone']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:30:46.600" level="INFO">Clicking element '//input[@ng-model='Phone']'.</msg>
+<status status="PASS" starttime="20240205 14:30:46.599" endtime="20240205 14:30:46.663"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:30:48.664" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:30:46.664" endtime="20240205 14:30:48.664"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=//input[@ng-model='Phone']</arg>
+<arg>text=${NUMERO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240205 14:30:48.665" level="INFO">Typing text '(91) 983551401' into text field '//input[@ng-model='Phone']'.</msg>
+<status status="PASS" starttime="20240205 14:30:48.664" endtime="20240205 14:30:48.754"/>
+</kw>
+<status status="PASS" starttime="20240205 14:30:44.598" endtime="20240205 14:30:48.754"/>
+</kw>
+<kw name="E seleciono o campo obrigatório “Gender” sendo “FeMale”" library="register_resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:30:50.755" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:30:48.755" endtime="20240205 14:30:50.755"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//input[@value='FeMale']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:30:50.756" level="INFO">Clicking element '//input[@value='FeMale']'.</msg>
+<status status="PASS" starttime="20240205 14:30:50.755" endtime="20240205 14:30:50.840"/>
+</kw>
+<status status="PASS" starttime="20240205 14:30:48.755" endtime="20240205 14:30:50.840"/>
+</kw>
+<kw name="E seleciono o campo “Hobbies” sendo “Movies”" library="register_resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:30:52.842" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:30:50.841" endtime="20240205 14:30:52.842"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//input[contains(@value,'Movies')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:30:52.842" level="INFO">Clicking element '//input[contains(@value,'Movies')]'.</msg>
+<status status="PASS" starttime="20240205 14:30:52.842" endtime="20240205 14:30:52.916"/>
+</kw>
+<status status="PASS" starttime="20240205 14:30:50.841" endtime="20240205 14:30:52.916"/>
+</kw>
+<kw name="E seleciono o campo “Languages” sendo “inglês”" library="register_resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:30:54.916" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:30:52.916" endtime="20240205 14:30:54.916"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//div[@class='ui-autocomplete-multiselect ui-state-default ui-widget']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:30:54.917" level="INFO">Clicking element '//div[@class='ui-autocomplete-multiselect ui-state-default ui-widget']'.</msg>
+<status status="PASS" starttime="20240205 14:30:54.916" endtime="20240205 14:30:54.992"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:30:56.994" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:30:54.992" endtime="20240205 14:30:56.994"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//a[@class='ui-corner-all'][contains(.,'English')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:30:56.995" level="INFO">Clicking element '//a[@class='ui-corner-all'][contains(.,'English')]'.</msg>
+<status status="PASS" starttime="20240205 14:30:56.994" endtime="20240205 14:30:57.075"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//div[contains(@class,'row ')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:30:57.076" level="INFO">Clicking element '//div[contains(@class,'row ')]'.</msg>
+<status status="PASS" starttime="20240205 14:30:57.075" endtime="20240205 14:30:57.123"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:30:59.124" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:30:57.123" endtime="20240205 14:30:59.124"/>
+</kw>
+<status status="PASS" starttime="20240205 14:30:52.916" endtime="20240205 14:30:59.124"/>
+</kw>
+<kw name="E seleciono o campo “Skills” sendo “Adobe InDesign”" library="register_resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:31:01.125" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:30:59.125" endtime="20240205 14:31:01.125"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//select[contains(@ng-model,'Skill')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:31:01.126" level="INFO">Clicking element '//select[contains(@ng-model,'Skill')]'.</msg>
+<status status="PASS" starttime="20240205 14:31:01.125" endtime="20240205 14:31:01.197"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:31:03.197" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:31:01.197" endtime="20240205 14:31:03.198"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//option[@value='Adobe InDesign'][contains(.,'Adobe InDesign')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:31:03.198" level="INFO">Clicking element '//option[@value='Adobe InDesign'][contains(.,'Adobe InDesign')]'.</msg>
+<status status="PASS" starttime="20240205 14:31:03.198" endtime="20240205 14:31:03.250"/>
+</kw>
+<status status="PASS" starttime="20240205 14:30:59.124" endtime="20240205 14:31:03.250"/>
+</kw>
+<kw name="E seleciono o campo “Select Country” sendo “Japan”" library="register_resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:31:05.252" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:31:03.252" endtime="20240205 14:31:05.252"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//span[@class='select2-selection select2-selection--single']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:31:05.253" level="INFO">Clicking element '//span[@class='select2-selection select2-selection--single']'.</msg>
+<status status="PASS" starttime="20240205 14:31:05.252" endtime="20240205 14:31:05.362"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:31:07.363" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:31:05.363" endtime="20240205 14:31:07.363"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//option[@value='Japan']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:31:07.364" level="INFO">Clicking element '//option[@value='Japan']'.</msg>
+<status status="PASS" starttime="20240205 14:31:07.363" endtime="20240205 14:31:07.408"/>
+</kw>
+<status status="PASS" starttime="20240205 14:31:03.251" endtime="20240205 14:31:07.408"/>
+</kw>
+<kw name="E seleciono o campo “Date Of Birth” sendo “1995”, “Februry”, &quot;12&quot;" library="register_resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:31:09.410" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:31:07.409" endtime="20240205 14:31:09.410"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//select[@placeholder='Year']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:31:09.410" level="INFO">Clicking element '//select[@placeholder='Year']'.</msg>
+<status status="PASS" starttime="20240205 14:31:09.410" endtime="20240205 14:31:09.485"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//option[@value='1995'][contains(.,'1995')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:31:09.486" level="INFO">Clicking element '//option[@value='1995'][contains(.,'1995')]'.</msg>
+<status status="PASS" starttime="20240205 14:31:09.485" endtime="20240205 14:31:09.522"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:31:11.523" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:31:09.522" endtime="20240205 14:31:11.523"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//select[@placeholder='Month']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:31:11.524" level="INFO">Clicking element '//select[@placeholder='Month']'.</msg>
+<status status="PASS" starttime="20240205 14:31:11.523" endtime="20240205 14:31:11.607"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//option[contains(@value,'February')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:31:11.608" level="INFO">Clicking element '//option[contains(@value,'February')]'.</msg>
+<status status="PASS" starttime="20240205 14:31:11.608" endtime="20240205 14:31:11.642"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//select[@placeholder='Day']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:31:11.643" level="INFO">Clicking element '//select[@placeholder='Day']'.</msg>
+<status status="PASS" starttime="20240205 14:31:11.642" endtime="20240205 14:31:11.720"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//option[@value='12'][contains(.,'12')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:31:11.722" level="INFO">Clicking element '//option[@value='12'][contains(.,'12')]'.</msg>
+<status status="PASS" starttime="20240205 14:31:11.721" endtime="20240205 14:31:11.762"/>
+</kw>
+<status status="PASS" starttime="20240205 14:31:07.409" endtime="20240205 14:31:11.762"/>
+</kw>
+<kw name="E preencho o campo “Password” sendo &quot;123456789&quot;" library="register_resources" sourcename="E preencho o campo “Password” sendo &quot;${SENHA}&quot;">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:31:13.763" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:31:11.763" endtime="20240205 14:31:13.763"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//input[@ng-model='Password']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:31:13.765" level="INFO">Clicking element '//input[@ng-model='Password']'.</msg>
+<status status="PASS" starttime="20240205 14:31:13.763" endtime="20240205 14:31:13.821"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=//input[@ng-model='Password']</arg>
+<arg>text=${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240205 14:31:13.822" level="INFO">Typing text '123456789' into text field '//input[@ng-model='Password']'.</msg>
+<status status="PASS" starttime="20240205 14:31:13.821" endtime="20240205 14:31:13.888"/>
+</kw>
+<status status="PASS" starttime="20240205 14:31:11.763" endtime="20240205 14:31:13.888"/>
+</kw>
+<kw name="E preencho o campo “Confirm Password” sendo &quot;123456789&quot;" library="register_resources" sourcename="E preencho o campo “Confirm Password” sendo &quot;${SENHA}&quot;">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:31:15.890" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:31:13.889" endtime="20240205 14:31:15.890"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//input[@ng-model='CPassword']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:31:15.891" level="INFO">Clicking element '//input[@ng-model='CPassword']'.</msg>
+<status status="PASS" starttime="20240205 14:31:15.890" endtime="20240205 14:31:15.948"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=//input[@ng-model='CPassword']</arg>
+<arg>text=${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240205 14:31:15.950" level="INFO">Typing text '123456789' into text field '//input[@ng-model='CPassword']'.</msg>
+<status status="PASS" starttime="20240205 14:31:15.949" endtime="20240205 14:31:16.033"/>
+</kw>
+<status status="PASS" starttime="20240205 14:31:13.889" endtime="20240205 14:31:16.033"/>
+</kw>
+<kw name="Então seleciono o botão “Submit” para salvar o novo Registro" library="register_resources">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240205 14:31:18.035" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240205 14:31:16.034" endtime="20240205 14:31:18.035"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//button[@value='sign up']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240205 14:31:18.036" level="INFO">Clicking element '//button[@value='sign up']'.</msg>
+<status status="PASS" starttime="20240205 14:31:18.035" endtime="20240205 14:31:18.159"/>
+</kw>
+<status status="PASS" starttime="20240205 14:31:16.034" endtime="20240205 14:31:18.159"/>
+</kw>
+<kw name="Fechar o navegador" library="register_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240205 14:31:18.574" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-35.png"&gt;&lt;img src="selenium-screenshot-35.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240205 14:31:18.160" endtime="20240205 14:31:18.574"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240205 14:31:18.575" endtime="20240205 14:31:20.896"/>
+</kw>
+<status status="PASS" starttime="20240205 14:31:18.160" endtime="20240205 14:31:20.896"/>
+</kw>
+<doc>Realizando teste para preencher formulário e realizar um novo registro</doc>
+<tag>teste_qa</tag>
+<status status="PASS" starttime="20240205 14:30:14.366" endtime="20240205 14:31:20.897"/>
+</test>
+<doc>Essa suite testa o site da https://demo.automationtesting.in/Register.html para criar um novo registro</doc>
+<status status="PASS" starttime="20240205 14:30:14.101" endtime="20240205 14:31:20.898"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">teste_qa</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Register">Register</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
